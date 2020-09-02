@@ -1,0 +1,505 @@
+.container {
+  width: 100%;
+}
+.wrapper {
+  padding: 10px 50px 5px 50px;
+
+  text-align: justify;
+}
+.dark {
+  background-color: #31353d;
+  color: white;
+}
+.light {
+  background-color: #e9edf2;
+}
+body {
+  background-image: url(../images/Full_screen.jpg);
+  font-family: "Lobster", cursive;
+  background-repeat: no-repeat;
+
+  background-size: 2000px 2000px;
+}
+#clear {
+  clear: both;
+}
+#top_left {
+  display: inline-block;
+}
+#top_right {
+  float: right;
+}
+#top_div {
+  height: 40px;
+  line-height: 35px;
+}
+#logo_left {
+  display: inline-block;
+}
+#logo_right {
+  float: right;
+  margin-top: 25px;
+}
+#textstyle {
+  height: 30px;
+  border-radius: 8px;
+  width: 200px;
+}
+#button {
+  background-color: green;
+  color: white;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid green;
+  width: 70px;
+}
+#menu ul {
+  list-style: none;
+}
+#menu ul li {
+  background-image: url(../images/single.jpg);
+  margin: 2px;
+  margin-left: 90px;
+  width: 210px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  float: left;
+  position: relative;
+  z-index: 1000;
+  border-radius: 100px;
+}
+#menu ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.a {
+  margin-top: -15px;
+}
+#menu ul li a:hover {
+  background-color: green;
+  border-radius: 8px;
+}
+#menu ul ul {
+  position: absolute;
+  display: none;
+}
+#menu ul li:hover > ul {
+  display: block;
+}
+#menu ul ul ul {
+  margin-left: 100px;
+  top: 0px;
+}
+#menu ul ul ul li {
+  background-color: slateblue;
+  width: 220px;
+}
+#menu {
+  background-color: white;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.99fr;
+  grid-template-rows: 15vh 140vh 15vh;
+  align-content: space-around;
+  justify-content: space-evenly;
+  transition: all 0.5s;
+}
+section > main {
+  display: grid;
+  grid-template-columns: repeat(4, 20vw);
+  grid-template-rows: repeat(2, 55vh);
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+.items {
+  border-radius: 5px;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.item-1 {
+  background-image: url("../images/men/a346dcff7f228d755aaf6970227c62b6.jpg");
+  background-size: 100% 100%;
+}
+
+.item-1::after {
+  content: "White Shirt ";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-1::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-1:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-1:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/men/a346dcff7f228d755aaf6970227c62b6.jpg");
+  cursor: pointer;
+}
+
+.item-2 {
+  background-image: url("../images/p-009_2.jpg");
+  background-size: 100% 100%;
+}
+
+.item-2::after {
+  content: "Leather Jacket";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-2::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-2:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-2:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/p-009_2.jpg");
+  cursor: pointer;
+}
+
+.item-3 {
+  background-image: url("../images/men/photo-of-man-in-black-crew-neck-t-shirt-standing-beside-3662357.jpg");
+  background-size: 100% 100%;
+}
+
+.item-3::after {
+  content: "Black Shirt";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-3::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-3:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-3:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/men/photo-of-man-in-black-crew-neck-t-shirt-standing-beside-3662357.jpg");
+  cursor: pointer;
+}
+
+.item-4 {
+  background-image: url("../images/men/photo-of-tattooed-man-in-black-t-shirt-sunglasses-and-black-2585828.jpg");
+  background-size: 100% 100%;
+}
+
+.item-4::after {
+  content: "Black Short";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-4::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-4:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-4:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/men/photo-of-tattooed-man-in-black-t-shirt-sunglasses-and-black-2585828.jpg");
+  cursor: pointer;
+}
+
+.item-5 {
+  background-image: url("../images/men/girl-in-red-crop-top-wearing-white-headphones-3755931.jpg");
+  background-size: 100% 100%;
+  top: 50%;
+}
+
+.item-5::after {
+  content: "Red Shirt";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-5::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-5:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-5:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/men/girl-in-red-crop-top-wearing-white-headphones-3755931.jpg");
+  cursor: pointer;
+}
+
+.item-6 {
+  background-image: url("../images/men/person-in-blue-jeans-1138560.jpg");
+  background-size: 100% 100%;
+  top: 50%;
+}
+
+.item-6::after {
+  content: "Jeans";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-6::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-6:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-6:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/men/person-in-blue-jeans-1138560.jpg");
+  cursor: pointer;
+}
+
+.item-7 {
+  background-image: url("../images/p-metro-10.jpg");
+  background-size: 100% 100%;
+  top: 50%;
+}
+
+.item-7::after {
+  content: "White Dress";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-7::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-7:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-7:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/p-metro-10.jpg");
+  cursor: pointer;
+}
+
+.item-8 {
+  background-image: url("../images/men/woman-in-black-and-white-plaid-dress-shirt-and-blue-denim-3800744.jpg");
+  background-size: 100% 100%;
+  top: 50%;
+}
+
+.item-8::after {
+  content: "Black shoes";
+  position: absolute;
+  bottom: -13.5%;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: white;
+}
+
+.item-8::before {
+  content: "Add To Cart";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 27%;
+  top: 45%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.item-8:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.item-8:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/men/woman-in-black-and-white-plaid-dress-shirt-and-blue-denim-3800744.jpg");
+  cursor: pointer;
+}
+.footer {
+  top: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  background-color: green;
+  background-color: #31353d;
+  color: white;
+}

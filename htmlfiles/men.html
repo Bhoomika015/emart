@@ -1,0 +1,667 @@
+<!DOCTYPE html5>
+
+<head>
+    <title>EMART</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style2.css" />
+    <meta name="description" content="Product website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Citycons_bag-512.webp" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d1a81d2769.js" crossorigin="anonymous"></script>
+
+    <style type="text/css"></style>
+    <style>
+        .modal-button {
+            background-color: red;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 5px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-family: "Lobster", cursive;
+
+            float: right;
+        }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            font-family: "Lobster", cursive;
+            padding: 50px;
+            font-size: 1.2rem;
+            border: 1px solid #888;
+            width: 70%;
+            height: 60%;
+            background-size: 100% 100%;
+            padding-left: 120px;
+            padding-top: 70px;
+
+        }
+
+        #bbb {
+            font-family: "Lobster", cursive;
+        }
+
+
+
+        .btn {
+            display: inline-block;
+            background: #ff523b;
+            color: white;
+            padding: 8px 30px;
+            margin: 30px 0;
+            border-radius: 30px;
+            font-size: 20px;
+            transition: background 0.5s;
+        }
+
+        .btn:hover {
+            background: #563434;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+
+
+
+        }
+
+        .column {
+            float: right;
+            width: 50%;
+
+            padding-right: 80px;
+        }
+
+        #GFG {
+            text-decoration: none;
+        }
+
+
+        /* Blue */
+    </style>
+
+</head>
+
+<body>
+    <div class="container dark">
+        <div class="wrapper" id="top_div">
+            <div id="top_left">Welcome to E M A R T </div>
+            <div id="top_right"><a href="log In.html" style="color:white">Log-in</a>OR <a href="sign up.html"
+                    style="color:white">Sign-up</a></div>
+            <div id="clear"></div>
+        </div>
+    </div>
+    <div class="container light">
+        <div class="wrapper">
+            <div id="logo_left"><img src="../images/Emart.png" height="80px" /></div>
+            <div id="logo_right">
+                <form><input type="text" id="textstyle" placeholder="  What are you looking for?" name=" textbox" /><a
+                        href="http://www.google.com/search"><input type="button" id="button" name="search"
+                            value="Search" href="www.amazon.in/search" /></a></form>
+            </div>
+        </div>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Category<span><img src="../icons/downicon1.png" /></span></a>
+                <ul>
+                    <li><a href="men.html">For Men and Women <span><img src="../icons/r3.png" /></span></a>
+                        <ul>
+                            <li><a href="men.html">Best Sellers </a></li>
+                            <li><a href="men.html">Clothing</a></li>
+                            <li><a href="men.html">Just launched</a></li>
+                            <li><a href="men.html">Watches and Hand-bands</a></li>
+                            <li><a href="men.html">Foot-wears</a></li>
+                            <li><a href="men.html">Fashion</a></li>
+                            <li><a href="men.html">Sport-wears</a></li>
+                            <li><a href="men.html">Eye-wears and Lens</a></li>
+                            <li><a href="men.html">Fragrances</a></li>
+                            <li><a href="men.html">Daily accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Furniture<span><img src="../icons/r3.png" /></span></a>
+                        <ul>
+                            <li><a href="#">All categories</a></li>
+                            <li><a href="#">chairs and seating</a></li>
+                            <li><a href="#">Desks</a></li>
+                            <li><a href="#">Tables</a></li>
+                            <li><a href="#">Beds</a></li>
+                            <li><a href="#">Storage</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">About US</a></li>
+        </ul>
+    </div>
+    <li class="a"><span onclick="openBucket()"><img
+                src="https://img.icons8.com/nolan/64/clear-shopping-cart.png" /></span>
+        <span class="bottom-items-count"></span>
+    </li>
+    <br /></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+    <section>
+        <main>
+            <div class="items item-1" data-item="White Shirt" data-price="500" id="123">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 0px;font-size: larger;"><b>Rs 500</b></span>
+
+
+
+
+
+                <button class="modal-button" href="#myModal1" id="myBtn">Show more</button>
+                <div id="myModal1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/men/a346dcff7f228d755aaf6970227c62b6.jpg " width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;"> White Shirt</h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 500</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="items item-2" data-item="Leather Jacket" data-price="1500">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 0px;font-size: larger;"><b>Rs 1500</b></span><button
+                    class="modal-button" id="myBtn" href="#myModal2">Show more</button>
+                <div id="myModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/p-009_2.jpg " width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;">Leather Jacket</h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 1500</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+            <div class="items item-3" data-item="Black Shirt" data-price="500">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 0px;font-size: larger;"><b>Rs 500</b></span><button
+                    class="modal-button" id="myBtn" href="#myModal3">Show more</button>
+                <div id="myModal3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/men/photo-of-man-in-black-crew-neck-t-shirt-standing-beside-3662357.jpg "
+                            width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;">Black Shirt </h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 500</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <div class="items item-4" data-item="Black Short" data-price="500">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 00px;font-size: larger;"><b>Rs 500</b></span><button
+                    class="modal-button" id="myBtn" href="#myModal4">Show more</button>
+                <div id="myModal4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/men/photo-of-tattooed-man-in-black-t-shirt-sunglasses-and-black-2585828.jpg "
+                            width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;"> Black Short</h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 500</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="items item-5" data-item="Red Shirt" data-price="500">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 00px;font-size: larger;"><b>Rs 500</b></span><button
+                    class="modal-button" id="myBtn" href="#myModal5">Show more</button>
+                <div id="myModal5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/men/girl-in-red-crop-top-wearing-white-headphones-3755931.jpg "
+                            width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;"> Red Shirt
+                            </h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 500</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="items item-6" data-item="Jeans" data-price="800">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 00px;font-size: larger;"><b>Rs 800</b></span><button
+                    class="modal-button" id="myBtn" href="#myModal6">Show more</button>
+                <div id="myModal6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/men/person-in-blue-jeans-1138560.jpg" width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;"> Jeans</h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 800</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="items item-7" data-item="White Dress" data-price="2000">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 00px;font-size: larger;"><b>Rs 2000</b></span><button
+                    class="modal-button" id="myBtn" href="#myModal7">Show more</button>
+                <div id="myModal7" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/p-metro-10.jpg " width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;"> White Dress</h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 2000</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="items item-8" data-item="Black Shoes" data-price="1200">
+                <br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><span
+                    style="color: red;margin-left: 00px;font-size: larger;"><b>Rs 1200</b></span><button
+                    class="modal-button" id="myBtn" href="#myModal8">Show more</button>
+                <div id="myModal8" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <img src="../images/men/woman-in-black-and-white-plaid-dress-shirt-and-blue-denim-3800744.jpg "
+                            width="350px" height="450px" />
+
+                        <div class="column">
+                            <h2 style="font-size:35px;">Black shoes
+                            </h2>
+                            <h4 style="font-size:20px;">
+                                <font color="red"> Rs. 1200</font>
+                            </h4>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Select size</option>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                            <select id="bbb" style="font-size:18px;">
+                                <option>Quantity</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;<a href="" id="GFG" class="btn" style="font-size:18px;">
+                                Buy Now</a>
+
+                            <h3 style="font-size:25px;"> Product Details</h3>
+
+                            <p style="font-size:20px;"> This Forget Rules Half Sleeve T-shirt signifies untamed style.
+                                If you're a rulebreaker, this T-shirt is made for you!
+                                Pair it with joggers, a crossbody bag and pair of ankle length sneakers for the ultra
+                                cool look..</p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+    </section>
+    <center><img src="../images/biff.gif" style="height:25;width:25" /></center>
+
+    <div class="footer">
+        <p style="text-align:center;">Connect with us-<br />bhoomikabhoomi147@gmail.com </p>
+    </div>
+    <script>
+        // Get the button that opens the modal
+        var btn = document.querySelectorAll("button.modal-button");
+
+        // All page modals
+        var modals = document.querySelectorAll('.modal');
+
+        // Get the <span> element that closes the modal
+        var spans = document.getElementsByClassName("close");
+
+        // When the user clicks the button, open the modal
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].onclick = function (e) {
+                e.preventDefault();
+                modal = document.querySelector(e.target.getAttribute("href"));
+                modal.style.display = "block";
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].onclick = function () {
+                for (var index in modals) {
+                    if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+                }
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                for (var index in modals) {
+                    if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+                }
+            }
+        }
+
+        /*
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }*/
+    </script>
+
+
+
+</body>
+
+</html>

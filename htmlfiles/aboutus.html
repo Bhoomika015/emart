@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us Page</title>
+    <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        #sec3 {
+            position: relative;
+            top: -70px;
+        }
+
+        #sec5 {
+            position: relative;
+            top: 600px;
+        }
+
+
+
+        /* LOGIN MENU BAR */
+
+
+        #sec2 {
+            position: relative;
+            top: 70px;
+            width: 100%;
+            height: 150px;
+            background-color: rgb(228, 225, 225);
+            background-color: rgb(241, 240, 240);
+            display: flex;
+        }
+
+        .site-logo {
+            width: 30%;
+        }
+
+        .site-logo img {
+            /* position: fixed;
+    z-index: 1; */
+            float: left;
+            margin: 40px 0px 20px 100px;
+            width: 100px;
+            height: auto;
+        }
+
+        .site-name {
+            width: 40%;
+            text-align: center;
+        }
+
+        .site-name h1 {
+            margin: 30px 0px 10px 0px;
+            font-size: 40px;
+            text-shadow: 1px 1px 1px #7c2d26;
+            font-family: "Lobster", cursive;
+            letter-spacing: 5px;
+        }
+
+        .site-name h2 {
+            font-family: "Lobster", cursive;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Lobster", cursive;
+            margin: -15px 0px 0px 0px;
+            color: #E94B3CFF;
+            letter-spacing: 5px;
+            /* text-shadow: 1px 1px 2px black; */
+        }
+
+        .site-name h2:hover {
+            color: red;
+        }
+
+        .site-search {
+            text-align: center;
+            width: 30%;
+        }
+
+        .site-search input {
+            width: 40%;
+            height: 20px;
+            padding: 3px 20px;
+            border-radius: 12px;
+            border: 1px solid #2D2926FF;
+            margin: 60px 0px 0px 0px;
+        }
+
+        .site-search img {
+            display: none;
+
+        }
+
+        .site-search ::placeholder {
+            color: #E94B3CFF;
+            font-family: "Lobster", cursive;
+            font-weight: bold;
+        }
+
+
+        /* CONTENT MENU BAR :: HOME | CATEGORIES | CONTACT AND ABOUT US*/
+
+
+        /* SLIDER */
+
+        .slide {
+            display: none;
+        }
+
+        #sec4 .slider-container img {
+            margin: 60px 0px 0px 0px;
+            /* vertical-align: middle; */
+            width: 100%;
+            border: 2px solid black;
+            height: 480px;
+        }
+
+
+        /* Slideshow container */
+
+        .slider-container {
+            max-width: 1200px;
+            position: relative;
+            margin: auto;
+        }
+
+        .content1 {
+            position: relative;
+            top: -300px;
+            left: 100px;
+        }
+
+        .content2 {
+            position: relative;
+            top: -370px;
+            left: 400px;
+        }
+
+        .content3 {
+            position: relative;
+            color: white;
+            top: -370px;
+            left: 400px;
+        }
+
+
+        /* Caption text */
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .8
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .8
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+
+
+        /* CONTACT PAGE STYLE */
+
+        #contact {
+            width: 100%;
+            height: 70vh;
+            text-align: center;
+            /* background-image: url(images/contact1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+        }
+
+        .contact-heading {
+            text-align: center;
+            font-family: "Lobster", cursive;
+            text-decoration: underline;
+            margin-bottom: 55px;
+        }
+
+        .form-group {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .form-group label {
+            font-family: "Lobster", cursive;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 40%;
+            height: 30px;
+            border: none;
+            border: 1.5px solid rgb(31, 30, 30);
+            border-radius: 5px;
+        }
+
+        .form-group input::placeholder {
+            font-size: 15px;
+            font-family: "Lobster", cursive;
+            padding: 5px 15px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .btn #submit {
+            cursor: pointer;
+            width: 10%;
+            height: 30px;
+            border: 1.5px solid grey;
+            border-radius: 5px;
+        }
+
+        .btn #submit:hover {
+            border: 1.5px solid black;
+            font-weight: bold;
+        }
+
+
+        /* ABOUT PAGE STYLE */
+
+        .about {
+            width: 100%;
+            height: 70vh;
+        }
+
+        .about-heading {
+            text-align: center;
+            font-family: "Lobster", cursive;
+            font-size: 22px;
+            text-decoration: underline;
+        }
+
+        .about-container {
+            width: 100%;
+        }
+
+        .profile1 {
+            width: 90%;
+            height: 60vh;
+            margin: 0px auto;
+            padding: 20px;
+            border: 2px solid ligh;
+            background-color: #edebeb;
+            display: flex;
+        }
+
+        .profile1 img {
+            width: 40%;
+            border: 2px solid white;
+        }
+
+        .profile1 .pro-text {
+            width: 60%;
+            padding: 20px;
+            color: black;
+        }
+
+        .profile1 .pro-text h3 {
+            text-align: center;
+            font-family: "Lobster", cursive;
+            font-size: 30px;
+            margin: 0px 0px 50px 0px;
+            font-weight: normal;
+        }
+
+        .profile1 .pro-text p {
+            text-align: center;
+            margin: 0px;
+            font-family: "Lobster", cursive;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 30px;
+        }
+
+        .profile1 .pro-text .p12 {
+            margin: 10px 25px;
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .profile2 {
+            width: 90%;
+            height: 60vh;
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: #edebeb;
+            display: flex;
+        }
+
+        .profile2 img {
+            width: 40%;
+            border: 2px solid white;
+        }
+
+        .profile2 .pro-text {
+            width: 60%;
+            padding: 20px;
+            color: black;
+        }
+
+        .profile2 .pro-text h3 {
+            text-align: center;
+            font-family: "Lobster", cursive;
+            font-size: 30px;
+            margin: 0px 0px 50px 0px;
+            font-weight: normal;
+        }
+
+        .profile2 .pro-text p {
+            text-align: center;
+            margin: 0px;
+            font-family: "Lobster", cursive;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 30px;
+        }
+
+        .profile2 .pro-text .p12 {
+            margin: 10px 25px;
+            font-size: 15px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container dark">
+        <div class="wrapper" id="top_div">
+            <div id="top_left">
+                Welcome to E M A R T
+            </div>
+            <div id="top_right">
+                <a href="log In.html" style="color:white">Log-in</a> OR <a href="sign up.html"
+                    style="color:white">Sign-up</a>
+            </div>
+            <div id="clear">
+            </div>
+        </div>
+    </div>
+
+    <div class="container light">
+        <div class="wrapper">
+            <div id="logo_left">
+                <img src="../images/Emart.png" height="80px" />
+            </div>
+
+            <div id="logo_right">
+
+                <form>
+                    <input type="text" id="textstyle" placeholder="  What are you looking for?" name=" textbox" />
+                    <a href="http://www.google.com/search"><input type="button" id="button" name="search" value="Search"
+                            href="www.amazon.in/search" /></a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+    <div id="menu">
+        <ul>
+            <li> <a href="home.html">Home</a></li>
+            <li> <a href="#">Category<span><img src="../icons/downicon1.png" /></span></a>
+                <ul>
+                    <li><a href="#">For Men and Women <span> <img src="../icons/r3.png" /> </span> </a>
+                        <ul>
+                            <li><a href="#">Best Sellers </a></li>
+                            <li><a href="#">Clothing</a></li>
+                            <li><a href="#">Just launched</a></li>
+                            <li><a href="#">Watches and Hand-bands</a></li>
+                            <li><a href="#">Foot-wears</a></li>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Sport-wears</a></li>
+                            <li><a href="#">Eye-wears and Lens</a></li>
+                            <li><a href="#">Fragrances</a></li>
+                            <li><a href="#">Daily accessories</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li><a href="#">Furniture<span><img src="../icons/r3.png" /></span></a>
+                        <ul>
+                            <li><a href="#">All categories</a></li>
+                            <li><a href="#">chairs and seating</a></li>
+                            <li><a href="#">Desks</a></li>
+                            <li><a href="#">Tables</a></li>
+                            <li><a href="#">Beds</a></li>
+                            <li><a href="#">Storage</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <li> <a href="#">Contact US</a></li>
+            <li> <a href="#">About US</a></li>
+
+        </ul>
+
+    </div>
+
+    <li class="a"><span onclick="openBucket()"><img
+                src="https://img.icons8.com/nolan/64/clear-shopping-cart.png" /></span>
+        <span class="bottom-items-count"></span>
+    </li>
+    <br /><br /><br />
+
+    <section>
+        <div class="about">
+            <div class="about-heading">
+                <h2>
+                    Developers Profile
+                </h2>
+            </div>
+            <div class="about-container">
+                <div class="profile1">
+                    <img src="../images/" alt="">
+                    <div class="pro-text">
+                        <h3>BHOOMIKA GUPTA</h3>
+                        <p>Web Developer</p>
+                        <p>9997638795</p>
+                        <p>avigoel.3888@gmail.com</p>
+                        <p class="p12">I am a Btech student. Currently in 3rd year in Ghaziabad. I am keenly interested
+                            in web designing. I am a passionate and hardworking student. I am always ready to take new
+                            projects and always try my best to learn something new.
+                            I am very fond of reading and surfing about defence and cricket. Spending time listening to
+                            music is one of my interests. I have also been a part of NCC for 6 years and have B
+                            certificate. I have good command in Photoshop and
+                            have tried hands on MATLAB, TCAD in electronics field and have basic knowledge of C
+                            language. I have also made various Arduino based projects and I also have experience of
+                            working in a group.</p>
+                    </div>
+                </div>
+                <div class="profile2">
+                    <div class="pro-text">
+                        <h3>BHOOMIKA GUPTA</h3>
+                        <p>Web Developer</p>
+                        <p>9997638795</p>
+                        <p>avigoel.3888@gmail.com</p>
+                        <p class="p12">I am a Btech student. Currently in 3rd year in Ghaziabad. I am keenly interested
+                            in web designing. I am a passionate and hardworking student. I am always ready to take new
+                            projects and always try my best to learn something new.
+                            I am very fond of reading and surfing about defence and cricket. Spending time listening to
+                            music is one of my interests. I have also been a part of NCC for 6 years and have B
+                            certificate. I have good command in Photoshop and
+                            have tried hands on MATLAB, TCAD in electronics field and have basic knowledge of C
+                            language. I have also made various Arduino based projects and I also have experience of
+                            working in a group.</p>
+                    </div>
+                    <img src="images/about22.jpg" alt="">
+                </div>
+
+                <div class="footer">
+                    <p style="text-align:center;">Connect with us-<br />
+                        bhoomikabhoomi147@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br /><br /><br />
+</body>
+
+</html>

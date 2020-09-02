@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">4
+
+  <style>
+    .head .topnav {
+      background-color: #ff7171;
+      height: 70px;
+    }
+
+    .head .topnav ul {
+      list-style-type: none;
+      margin: 5px;
+      float: right;
+    }
+
+    .head .topnav ul li {
+      float: left;
+      padding: 10px 5px;
+      color: #ececec;
+      cursor: pointer;
+    }
+
+    .head .topnav ul li:nth-child(3) {
+      margin-right: 200px;
+    }
+
+    .middle ul {
+      list-style-type: none;
+      height: 50px;
+    }
+
+    .middle {
+      width: 100%;
+      padding: 10px;
+      position: relative;
+    }
+
+    .middle ul li img {
+      margin-left: 40px;
+      height: 104px;
+      width: 130px;
+      float: left;
+    }
+
+    .middle ul li .brand {
+      text-align: center;
+      font-size: 45px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FFAA71;
+      position: absolute;
+      top: 45px;
+    }
+
+    .middle ul li .example {
+      float: right;
+      max-width: 300px;
+      position: absolute;
+      right: 200px;
+      top: 45px;
+    }
+
+    .middle ul li form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: none;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+
+    .middle ul li form.example button {
+      float: right;
+      width: 19%;
+      padding: 10px;
+      background: #ececec;
+      color: #FFAA71;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .middle ul li form.example button:hover {
+      background: #FFAA71;
+      color: #ececec;
+    }
+
+    .middle ul li form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .bottomnav {
+      margin-top: 40px;
+      overflow: hidden;
+      background-color: #6e6d6d;
+    }
+
+    .bottomnav a {
+      float: left;
+      color: #ececec;
+      text-align: center;
+      padding: 17px 85px;
+      text-decoration: none;
+      font-size: 17px;
+      border-right: 2px solid #fff
+    }
+
+    .bottomnav a:hover {
+      background-color: #ff7171;
+    }
+
+    .bottomnav a:first-of-type {
+      border-left: 2px solid #fff;
+      margin-left: 45px;
+    }
+
+    .bottomnav a.active {
+      background-color: #ff7171;
+      color: white;
+    }
+
+
+    .slideshow-container {
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    section .slideshow-container .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .loginbutton {
+      background-color: #FFAA71;
+      color: #ececec;
+      font-size: 30px;
+    }
+
+    button:hover {
+      opacity: 0.6;
+    }
+
+    .imgcontainer {
+      position: relative;
+    }
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #ff7171;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #id02 input[type=text],
+    #id02 input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    #id02 input[type=number] {
+      width: 97%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    #id02 input[type=text]:focus,
+    #id02 input[type=password]:focus,
+    #id02 input[type=number]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    #id02 button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    #id02 button:hover {
+      opacity: 1;
+    }
+
+    #id02 .cancelbtn {
+      padding: 14px 20px;
+      background-color: #f44336;
+    }
+
+    #id02 .cancelbtn,
+    #id02 .signupbtn {
+      float: left;
+      width: 50%;
+    }
+
+    #id02 .container {
+      padding: 16px;
+    }
+
+    #id02 .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 90%;
+      overflow: auto;
+      background-color: #474e5d;
+      padding-top: 20px;
+    }
+
+    #id02 .modal-content {
+      background-color: #fefefe;
+      margin: 0 auto 15% auto;
+      border: 1px solid #888;
+      width: 80%;
+      padding: 20px;
+    }
+
+    #id02 hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    #id02 .close {
+      position: absolute;
+      right: 35px;
+      top: 15px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+
+    #id02 .close:hover,
+    #id02 .close:focus {
+      color: #f44336;
+      cursor: pointer;
+    }
+
+    #id02 .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .category_1 {
+      width: 48.2%;
+      margin-left: 5px;
+      height: 650px;
+      border-radius: 20px;
+      float: left;
+      margin-top: 15px;
+      padding: 5px;
+      box-shadow: 1px 1px 5px 5px #FFAA71;
+      background-color: #ff7171;
+    }
+
+    .category_1 img {
+      width: 100%;
+      height: 90%;
+      border-radius: 20px;
+      border: 1px solid black;
+    }
+
+    .category_2 {
+      width: 48.2%;
+      margin-left: 13px;
+      height: 650px;
+      border-radius: 20px;
+      float: right;
+      margin-top: 15px;
+      margin-right: 7px;
+      padding: 5px;
+      box-shadow: 1px 1px 5px 5px #FFAA71;
+      background-color: #ff7171;
+    }
+
+    .category_2 img {
+      width: 100%;
+      height: 90%;
+      border-radius: 20px;
+      border: 1px solid black;
+      opacity: 1;
+    }
+
+    .category_1 button,
+    .category_2 button {
+      background-color: #6e6d6d;
+    }
+
+    .category_1 button a,
+    .category_2 button a {
+      color: #ececec;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .category_1 button:hover,
+    .category_2 button:hover {
+      opacity: 0.6;
+    }
+
+    #id03 .modal,
+    #id04 .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 90%;
+      overflow: auto;
+      background-color: #474e5d;
+      padding-top: 20px;
+    }
+
+    #id03 .modal-content,
+    #id04 .modal-content {
+      background-color: #fefefe;
+      margin: 0 auto 15% auto;
+      border: 1px solid #888;
+      width: 80%;
+      padding: 20px;
+    }
+
+    .contact .contact_form input[type=text],
+    .contact .contact_form input[type=number],
+    .contact .contact_form textarea,
+    .contact .contact_form input[type=email] {
+      width: 100%;
+      border: none;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    .contact .contact_form input[type=button] {
+      background-color: #6e6d6d;
+      color: #ececec;
+      padding: 15px;
+      border: 1px solid #FFAA71;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 20px;
+      width: 25%;
+    }
+
+    .contact .contact_form input[type=button]:hover {
+      background-color: #ececec;
+      color: white;
+      box-shadow: 1px 1px 4px 4px black;
+    }
+
+    .contact {
+      border-radius: 5px;
+      padding: 20px;
+      width: 97%;
+      margin-top: 50px;
+    }
+
+    .contact label {
+      font-size: 20px;
+    }
+
+    .contact_heading {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      font-size: 50px;
+      font-family: "Lobster", cursive;
+      color: white;
+    }
+
+    .righter {
+      height: 300px;
+      border: 2px solid #ff7171;
+      box-shadow: 1px 1px 10px 10px #6e6d6d;
+      margin: 20px;
+      padding: 10px;
+      background-color: #edebeb;
+
+    }
+
+    .righter #map {
+      float: left;
+    }
+
+    .righter .other {
+      float: right;
+      width: 60%;
+      /* border: 1px solid black; */
+      padding: 23px 30px;
+    }
+
+    .sub_heading {
+      font-size: 20px;
+      color: black;
+      text-shadow: 1px 1px 1px black;
+      text-transform: uppercase;
+      margin: 8px 0px;
+    }
+
+    .contact_content {
+      font-size: 15px;
+      font-family: "Lobster", cursive;
+    }
+
+    .row {
+      width: 100%;
+      padding: 0;
+    }
+
+    .row .item {
+      width: 29%;
+      height: 610px;
+      border: 1px solid black;
+      float: left;
+      margin-top: 40px;
+      margin-left: 24px;
+      box-shadow: 1px 1px 5px 5px #6e6d6d;
+      transition: 0.3s ease-in-out;
+      padding: 12px;
+      position: relative;
+    }
+
+    .row .item:hover {
+      box-shadow: 1px 1px 5px 5px #FFAA71;
+      transform: scaleY(1.05);
+    }
+
+    .row .item img {
+      width: 100%;
+      height: 69.8%;
+    }
+
+    .row .item .rating {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: lightgreen;
+      font-size: 15px;
+      padding: 20px;
+    }
+
+    .row .item .button:first-child {
+      margin-left: 5%;
+    }
+
+    .row .item .name {
+      margin-top: 25px;
+      font-size: 20px;
+      margin-left: 30px;
+    }
+
+    .wishlist {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border: 1px solid #ececec;
+      box-shadow: 1px 1px 2px black;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!--middle logo brand search box-->
+  <div class="container dark">
+    <div class="wrapper" id="top_div">
+      <div id="top_left">
+        Welcome to E M A R T
+      </div>
+      <div id="top_right">
+        <a href="log In.html" style="color:white">Log-in</a> OR <a href="sign up.html" style="color:white">Sign-up</a>
+      </div>
+      <div id="clear">
+      </div>
+    </div>
+  </div>
+
+  <div class="container light">
+    <div class="wrapper">
+      <div id="logo_left">
+        <img src="../images/Emart.png" height="80px" />
+      </div>
+
+      <div id="logo_right">
+
+        <form>
+          <input type="text" id="textstyle" placeholder="  What are you looking for?" name=" textbox" />
+          <a href="http://www.google.com/search"><input type="button" id="button" name="search" value="Search"
+              href="www.amazon.in/search" /></a>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li> <a href="home.html">Home</a></li>
+      <li> <a href="#">Category<span><img src="../icons/downicon1.png" /></span></a>
+        <ul>
+          <li><a href="#">For Men and Women <span> <img src="../icons/r3.png" /> </span> </a>
+            <ul>
+              <li><a href="#">Best Sellers </a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Just launched</a></li>
+              <li><a href="#">Watches and Hand-bands</a></li>
+              <li><a href="#">Foot-wears</a></li>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Sport-wears</a></li>
+              <li><a href="#">Eye-wears and Lens</a></li>
+              <li><a href="#">Fragrances</a></li>
+              <li><a href="#">Daily accessories</a></li>
+
+            </ul>
+          </li>
+
+
+
+
+
+          <li><a href="#">Furniture<span><img src="../icons/r3.png" /></span></a>
+            <ul>
+              <li><a href="#">All categories</a></li>
+              <li><a href="#">chairs and seating</a></li>
+              <li><a href="#">Desks</a></li>
+              <li><a href="#">Tables</a></li>
+              <li><a href="#">Beds</a></li>
+              <li><a href="#">Storage</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      <li> <a href="#">Contact US</a></li>
+      <li> <a href="#">About US</a></li>
+
+    </ul>
+
+  </div>
+
+  <li class="a"><span onclick="openBucket()"><img
+        src="https://img.icons8.com/nolan/64/clear-shopping-cart.png" /></span>
+    <span class="bottom-items-count"></span>
+  </li>
+  <!--middle logo brand search box-->
+
+  <!--bottomnav-->
+
+  <!--//bottomnav-->
+
+  <br><br><br>
+  <h2 class="contact_heading">Contact Us</h2>
+
+  <!--other details-->
+  <div class="righter">
+    <div id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1883.7158461202964!2d72.85012165795575!3d19.220008979459745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6d556d0dacf%3A0xa4b7343282ecc868!2sGokul%20Dham%20Society%2C%20Borivali%20West%2C%20Mumbai%2C%20Maharashtra%20400092!5e0!3m2!1sen!2sin!4v1598790841931!5m2!1sen!2sin"
+        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+    </div>
+
+    <div class="other">
+      <p>
+      <h3 class="sub_heading">Office Address: </h3>
+      <span class="contact_content">Gokul Dham Society Borivali West, Mumbai, Maharashtra 400092</span>
+      </p>
+
+      <p>
+      <h3 class="sub_heading">Customer Care: </h3>
+      <span class="contact_content">1800 270 4598, 1800 270 4599</span>
+      </p>
+
+      <p>
+      <h3 class="sub_heading">Email Us: </h3>
+      <span class="contact_content">contact@shopperstop.com</span>
+      </p>
+
+    </div>
+  </div>
+  <!--//other details-->
+
+  <!--contact form-->
+  <div class="contact">
+    <form class="contact_form" style="width:750px;">
+      <label for="fname">Enter your name</label>
+      <input type="text" name="name" placeholder="Your Name" id="name">
+
+      <label for="phone">Mobile Number</label>
+      <input type="number" name="mobile" placeholder="Your Mobile Number" id="number">
+
+      <label for="email">Email Address</label>
+      <input type="email" name="mail" placeholder="Your Email Address" id="mail">
+
+      <label for="message">Message</label>
+      <textarea name="message" rows="12" placeholder="Your Message Here(min 10 characters) " id="msg"></textarea>
+
+      <br><br>
+
+      <center>
+        <input type="button" value="submit" onclick="validate();">
+      </center>
+    </form>
+
+  </div>
+
+  <br /><br /><br />
+  <div class="footer">
+    <p style="text-align:center;">Connect with us-<br />
+      bhoomikabhoomi147@gmail.com
+    </p>
+  </div>
+
+
+  <script>
+    function validate() {
+
+      alert("hi")
+
+      if ((document.getElementById("name").value == '')) {
+        alert("NAME NOT ENTERED");
+        return;
+      }
+
+      if ((document.getElementById("number").value == '')) {
+        alert("number NOT ENTERED");
+        return;
+      }
+
+      if (!(document.getElementById("number").value.match(/^\d{10}$/))) {
+        alert("number should have 10 digits")
+        return;
+      }
+
+      if ((document.getElementById("mail").value == '')) {
+        alert("mail NOT ENTERED");
+        return;
+      }
+
+      if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("mail").value))) {
+        alert("email is not correct format");
+        document.getElementById("email").select();
+        return;
+      }
+
+
+
+      if (document.getElementById("msg").value == "") {
+        alert("msg NOT ENTERED");
+        return;
+      }
+
+      if (document.getElementById("msg").value.length < 10) {
+        alert("msg should have minimum 10 chars");
+        return;
+      }
+
+      alert("submitted");
+
+    }
+  </script>
+
+</body>
+
+</html>

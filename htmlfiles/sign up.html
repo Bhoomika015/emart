@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <title>Sign UP at E M A R T</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <meta name="description" content="Product website" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <style type="text/css"></style>
+</head>
+
+<body>
+    <div class="container dark">
+        <div class="wrapper" id="top_div">
+            <div id="top_left">
+                Welcome to E M A R T
+            </div>
+            <div id="top_right">
+                <a href="log In.html" style="color:white">Log-in</a> OR <a href="sign up.html"
+                    style="color:white">Sign-up</a>
+            </div>
+            <div id="clear">
+            </div>
+        </div>
+    </div>
+    <div class="container light">
+        <div class="wrapper">
+            <div id="logo_left">
+                <img src="../images/Emart.png" height="80px" />
+            </div>
+            <div id="logo_right">
+                <form>
+                    <input type="text" id="textstyle" placeholder="  What are you looking for?" name="" textbox" />
+                    <a href="http://www.google.com/search"><input type="button" id="button" name="search" value="Search"
+                            href="www.amazon.in/search" /></a>
+                </form>
+            </div>
+            <div id="clear"></div>
+        </div>
+    </div>
+    <div id="menu">
+        <ul>
+            <li> <a href="home.html">Home</a></li>
+            <li> <a href="#">Category<span><img src="../icons/downicon1.png" /></span></a>
+                <ul>
+                    <li><a href="#">For Men and Women <span> <img src="../icons/r3.png" /> </span> </a>
+                        <ul>
+                            <li><a href="#">Best Sellers </a></li>
+                            <li><a href="#">Clothing</a></li>
+                            <li><a href="#">Just launched</a></li>
+                            <li><a href="#">Watches and Hand-bands</a></li>
+                            <li><a href="#">Foot-wears</a></li>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Sport-wears</a></li>
+                            <li><a href="#">Eye-wears and Lens</a></li>
+                            <li><a href="#">Fragrances</a></li>
+                            <li><a href="#">Daily accessories</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+
+
+                    <li><a href="#">Furniture<span><img src="../icons/r3.png" /></span></a>
+                        <ul>
+                            <li><a href="#">All categories</a></li>
+                            <li><a href="#">chairs and seating</a></li>
+                            <li><a href="#">Desks</a></li>
+                            <li><a href="#">Tables</a></li>
+                            <li><a href="#">Beds</a></li>
+                            <li><a href="#">Storage</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <li> <a href="#">Contact US</a></li>
+            <li> <a href="#">About US</a></li>
+
+        </ul>
+
+    </div>
+
+    <li><span onclick="openBucket()"><img src="https://img.icons8.com/color/48/000000/add-shopping-cart.png" /></span>
+        <span class="bottom-items-count"></span>
+    </li>
+
+
+    <br /><br />
+    <div class="login">
+        <p style="text-align:center; color:white">
+            <br /><br />
+            <font size="10px">Sign Up</font><br />
+        <div id="LOGIN">
+            <br />
+            <form align="center">
+                <p style="color:white">Enter your E-Mail : <input type="email" placeholder=" e-mail" id="email"
+                        name="email1" required />
+                    <br /></p>
+
+                <p style="color:white">Enter your Password : <input type="password" placeholder="  password..."
+                        id="password" name="password" required /><br /></p>
+
+                <p style="color:white">Re-enter your Password : <input type="password" placeholder="  password..."
+                        id="password1" name="password1" required /><br /></p>
+
+                <input type="button" id="button" name="search" value="Sign Up" onclick="validate();" /><br />
+                <p style="text-align:center; color:white"> OR </p>
+
+                <a href="log In.html"><input type="button" id="button" name="search" value="Log In" /><br /></a>
+            </form>
+        </div>
+        </p>
+    </div>
+
+    <div class="footer">
+        <p style="text-align:center;">Connect with us-<br />
+            bhoomikabhoomi147@gmail.com
+        </p>
+    </div>
+
+    <script>
+
+        function validate() {
+            var x = document.getElementById("email").value;
+            if (x == "") {
+                alert("email must be filled out");
+                return false;
+            }
+
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value))) {
+                alert("email is not correct format");
+                document.getElementById("email").select();
+                return;
+            }
+
+
+            if (document.getElementById("password").value == "") {
+                alert("enter password");
+                return false;
+            }
+
+            if (!(document.getElementById("password").value == (document.getElementById("password1").value))) {
+
+                alert("passwords not match");
+                document.getElementById("password").select();
+                return;
+            }
+
+            alert("sign up succesful")
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
